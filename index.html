@@ -10,98 +10,183 @@
       integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
       crossorigin="anonymous"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="src/style.css" />
     <title>Weather app</title>
   </head>
   <body>
     <div class="continer">
+      <div class="wrapper">
         <div class="weather-app">
-    <form>
-        <input type="search"
-        placeholder="Enter city">
-        <input type="submit"
-        value="search">
-        <input type="submit"
-        value="📍">
-    </form>
-    <div class="row">
-        <div class="col">
-            <h1>City name</h1>
-            <ul>
-                <li>Weekday, date</li>
-                <li>Time</li>
-            </ul>
-        </div>
-        <div class="col">
-            <img src="src/img/pngfind.com-hit-marker-png-242693.png" width="100px" alt="map-pin-icon">
-        </div>
-    </div>
-   <div class="container">
-    <div class="row">
-        <div class="col">
-            <img src="src/img/42410.svg" width="100px" alt="weather-icon-main">
-        </div>
-        <div class="col">
-            <ul>
-                <li>Degrees number C | F</li>
-                <li>Feels like </li>
-            </ul>
-        </div>
-        </div>
-        <div class="row">
+          <form>
+            <input
+              type="search"
+              placeholder="Enter city"
+              class="search-input"
+            />
+            <input type="submit" value="🔍" class="button-search-location" />
+            <input type="submit" value="📍" class="button-search-location" />
+          </form>
+          <div class="row">
             <div class="col">
-                <ul>
-                    <li>Description of weather</li>
+              <h1>New York</h1>
+              <ul>
+                <li> <span class="text-muted">Tuesday, 27 Sept</span> </li>
+                <li> <span class="text-muted">22:30</span> </li>
+              </ul>
+            </div>
+            <div class="col">
+              <img
+                src="src/img/map-icon.png"
+                alt="map-pin-icon"
+                class="map-icon"
+              />
+            </div>
+          </div>
+          <div class="container">
+            <div class="weather-main-container">
+              <div class="row">
+                <div class="col">
+                  <img
+                    src="src/img/pngwing.com.png"
+                    alt="weather-icon-main"
+                    class="main-icon"
+                  />
+                  <ul class="text-start">
+                    <li>Clouds</li>
                     <li>Right now</li>
-                </ul>
+                  </ul>
+                </div>
+                <div class="col">
+                  <ul class="text-center">
+                    <li>
+                      <span class="main-temperature">24</span>
+                      <span class="units">C° | F°</span>
+                    </li>
+                    <li class="text-end">Feels like</li>
+                  </ul>
+                  <img
+                    src="src/img/icons8-wind-65.png"
+                    class="random-picture"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <ul>
+                <li>
+                  <img
+                    src="src/img/icons8-precipitation-64.png"
+                    alt="humidity"
+                    class="image-weather-details"
+                  />
+                </li>
+                <li class="text-center">23%</li>
+              </ul>
+            </div>
+            <div class="col">
+              <ul>
+                <li>
+                  <img
+                    src="src/img/icons8-wind-64.png"
+                    alt="wind"
+                    class="image-weather-details"
+                  />
+                </li>
+                <li class="text-center">8 km/h</li>
+              </ul>
+            </div>
+            <div class="col">
+              <li>
+                <img
+                  src="src/img/icons8-sun-behind-rain-cloud-64.png"
+                  alt="possible-rain"
+                  class="image-weather-details"
+                />
+              </li>
+              <li class="text-center">20%</li>
+            </div>
+          </div>
+          <div class="container">
+            <h2>Today</h2>
+            <div class="row">
+              <div class="col">
+                <div class="col-wrapper">
+                  <ul>
+                    <li class="text-center">18:00</li>
+                    <li>
+                      <img
+                        src="src/img/icon-rain-bottom.png"
+                        alt="rain"
+                        class="image-weather-details"
+                      />
+                    </li>
+                    <li class="text-center">22°</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col">
+                <div class="col-wrapper">
+                  <ul>
+                    <li class="text-center">20:00</li>
+                    <li>
+                      <img
+                        src="src/img/icon-sun-rain.png"
+                        alt="sun-rain"
+                        class="image-weather-details"
+                      />
+                    </li>
+                    <li class="text-center">32°</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col">
+                <div class="col-wrapper">
+                  <ul>
+                    <li class="text-center">23:00</li>
+                    <li>
+                      <img
+                        src="src/img/icon-sun.png"
+                        alt="sun"
+                        class="image-weather-details"
+                      />
+                    </li>
+                    <li class="text-center">32°</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col">
+                <div class="col-wrapper">
+                  <ul>
+                    <li class="text-center">24:00</li>
+                    <li>
+                      <img
+                        src="src/img/icon-thunder.png"
+                        alt="thunder"
+                        class="image-weather-details"
+                      />
+                    </li>
+                    <li class="text-center">22°</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
-   </div>
-   <div class="row">
-    <div class="col">
-        Humidity + icon
-    </div>
-    <div class="col">Wind + icon</div>
-    <div class="col">Rain pos + icon</div>
-   </div>
-   <div class="container">
-    <h2>Today</h2>
-    <div class="row">
-        <div class="col">
-            <ul>
-                <li>Time</li>
-                <li>Icon</li>
-                <li>Temp</li>
-            </ul>
-        </div>
-        <div class="col">
-            <ul>
-                <li>Time</li>
-                <li>Icon</li>
-                <li>Temp</li>
-            </ul>
-        </div>
-        <div class="col">
-            <ul>
-                <li>Time</li>
-                <li>Icon</li>
-                <li>Temp</li>
-            </ul>
-        </div>
-        <div class="col">
-            <ul>
-                <li>Time</li>
-                <li>Icon</li>
-                <li>Temp</li>
-            </ul>
-        </div>
-    </div>
-   </div>
-    </div>
-    <small>
-        <a href="http://github.com/kelly9323/Vanilla-project" target="_blank">Open-source code</a>
-        by Anastasiia Shlapak
-    </small>
+        <small>
+          <a href="http://github.com/kelly9323/Vanilla-project" target="_blank" class="text-black"
+            >Open-source code</a
+          >
+          by Anastasiia Shlapak
+        </small>
+      </div>
     </div>
     <script src="src/app.js"></script>
   </body>
