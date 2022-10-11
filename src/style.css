@@ -77,19 +77,21 @@ form {
   box-shadow: -2px 2px 41px 0px rgba(194, 190, 194, 0.88);
 }
 .search-input {
-  width: 70%;
   padding: 7px;
   border-radius: 20px;
   border: 2px solid rgba(194, 190, 194, 0.88);
 }
 .button-search-location {
-  width: 13%;
   border-radius: 14px;
   border: none;
+  width: 41px;
   padding: 10px;
   background-color: #5694ff;
   transition: all 200ms ease-in-out;
   box-shadow: -2px 2px 24px -7px rgba(0, 0, 0, 0.75);
+}
+.width{
+  width: 13%;
 }
 .button-search-location:hover {
   background-color: #b0c9fb;
