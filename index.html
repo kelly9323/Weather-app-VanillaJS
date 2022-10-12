@@ -27,26 +27,34 @@
           <form id="search-form">
             <div class="row">
               <div class="col-8">
-            <input
-              type="search"
-              placeholder="Enter city"
-              class="search-input form-control"
-              id="city-input"
-            />
-            </div>
-            <div class="col-2 width">
-            <input type="submit" value="🔍" class="button-search-location" />
-            </div>
-            <div class="col-2">
-              <input type="submit" value="📍" class="button-search-location" />
-          </div>
+                <input
+                  type="search"
+                  placeholder="Enter city"
+                  class="search-input form-control"
+                  id="city-input"
+                />
+              </div>
+              <div class="col-2 width">
+                <input
+                  type="submit"
+                  value="🔍"
+                  class="button-search-location"
+                />
+              </div>
+              <div class="col-2">
+                <input
+                  type="submit"
+                  value="📍"
+                  class="button-search-location"
+                />
+              </div>
             </div>
           </form>
           <div class="row">
             <div class="col">
               <h1 id="city"></h1>
               <ul>
-                <li> <span class="text-muted" id="weekDay"></span> </li>
+                <li><span class="text-muted" id="weekDay"></span></li>
               </ul>
             </div>
             <div class="col">
@@ -75,9 +83,19 @@
                   <ul class="text-center">
                     <li>
                       <span class="main-temperature" id="temperature"></span>
-                      <span class="units">C° | F°</span>
+                      <span class="units">
+                        <a href="#" class="active text-white" id="celsius-link"
+                          >C°</a
+                        >
+                        |
+                        <a href="#" class="text-white" id="fahrenheit-link"
+                          >F°</a
+                        ></span
+                      >
                     </li>
-                    <li class="text-end">Feels like <span id="feelsLike" class="fs-4"></span>°</li>
+                    <li class="text-end">
+                      Feels like <span id="feelsLike" class="fs-4"></span>°
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -105,7 +123,7 @@
                     class="image-weather-details"
                   />
                 </li>
-                <li class="text-center"> <span id="wind"></span> km/h</li>
+                <li class="text-center"><span id="wind"></span> km/h</li>
               </ul>
             </div>
             <div class="col">
@@ -186,7 +204,10 @@
           </div>
         </div>
         <small>
-          <a href="http://github.com/kelly9323/Vanilla-project" target="_blank" class="text-black"
+          <a
+            href="http://github.com/kelly9323/Vanilla-project"
+            target="_blank"
+            class="text-black"
             >Open-source code</a
           >
           by Anastasiia Shlapak

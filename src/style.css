@@ -123,4 +123,11 @@ form {
 .col-wrapper:hover{
     background-color: #80ADFD;
 }
-
+.active{
+  color: rgb(255, 255, 255);
+  cursor: default;
+  text-decoration: none;
+}
+.active:hover{
+  color:rgb(255, 255, 255);;
+}
