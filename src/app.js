@@ -38,6 +38,34 @@ function formatDate(timestamp) {
   return `Upd: ${weekDay}, ${day} ${month} </br> ${hours}:${minutes}`;
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+  let days = ["Thu", "Fri", "Sat", "Sun"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      ` <div class="col-3">
+                <div class="col-wrapper">
+                    <div class="weather-forecast-day">${day}</div>
+                      <img
+                        src="src/img/icon-rain-bottom.png"
+                        alt="rain"
+                        class="image-weather-details"
+                      />
+                    <div class="temperature-weather-forecast">
+                      <span class="max-temp">20</span>  
+                     <span class="min-temp">17</span>
+                    </div>
+                    
+                </div>
+                
+              </div>`;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
 function displayTemperature(response) {
   let temperatureElement = document.querySelector("#temperature");
   let cityElement = document.querySelector("#city");
@@ -99,11 +127,11 @@ function showCtemp(event) {
   tempFeel.innerHTML = Math.round(feelsLikeElement);
 }
 
-function geolocationRequest(){
+function geolocationRequest() {
   navigator.geolocation.getCurrentPosition(handlePosition);
 }
 
-function handlePosition(position){
+function handlePosition(position) {
   let lat = position.coords.latitude;
   let lon = position.coords.longitude;
   let units = "metric";
@@ -128,3 +156,4 @@ let submitLocation = document.querySelector("#geolocation-button");
 submitLocation.addEventListener("click", geolocationRequest);
 
 search("New York");
+displayForecast();

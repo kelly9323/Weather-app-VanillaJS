@@ -107,20 +107,32 @@ form {
 .image-weather-details{
     display: block;
     margin: 6px auto;
-    border-radius: 15px;
     width: 50px;
     height: 50px;
 
 }
-.col-wrapper{
+.weather-forecast{
+  text-align: center;
+  color: white;
+}
+.weather-forecast-day{
+  font-size: 18px;
+}
+.temperature-weather-forecast{
+  font-size: 14px;
+}
+.min-temp{
+  color: rgba(38, 37, 37, 0.792);
+}
 
+.col-wrapper{
     color: white;
     border-radius: 30px;
     background-color: #AEC7F8;
     box-shadow: -2px 2px 24px -7px rgba(0, 0, 0, 0.75);
     transition: all 200ms ease-in-out;
-}
-.col-wrapper:hover{
+} 
+ .col-wrapper:hover{
     background-color: #80ADFD;
 }
 .active{
