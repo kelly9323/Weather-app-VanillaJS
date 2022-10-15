@@ -54,10 +54,10 @@ function displayForecast(response) {
   let forecastHTML = `<div class="row">`;
 
   forecast.forEach(function (forecastDay, index) {
-    if (index < 4){
-    forecastHTML =
-      forecastHTML +
-      ` <div class="col-3">
+    if (index < 4) {
+      forecastHTML =
+        forecastHTML +
+        ` <div class="col-3">
                 <div class="col-wrapper">
                     <div class="weather-forecast-day">${formatDay(
                       forecastDay.dt
@@ -71,14 +71,18 @@ function displayForecast(response) {
                         class="image-weather-details"
                       />
                     <div class="temperature-weather-forecast">
-                      <span class="max-temp">${Math.round(forecastDay.temp.max)}°</span>  
-                     <span class="min-temp">${Math.round(forecastDay.temp.min)}°</span>
+                      <span class="max-temp">${Math.round(
+                        forecastDay.temp.max
+                      )}°</span>  
+                     <span class="min-temp">${Math.round(
+                       forecastDay.temp.min
+                     )}°</span>
                     </div>
                     
                 </div>
                 
               </div>`;
-                      }
+    }
   });
 
   forecastHTML = forecastHTML + `</div>`;
@@ -131,27 +135,6 @@ function handleSubmit(event) {
   let cityInputElement = document.querySelector("#city-input");
   search(cityInputElement.value);
 }
-function showFtemp(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  celsiusLink.classList.remove("active");
-  fahrenheitLink.classList.add("active");
-  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
-  let feelsLike = (feelsLikeElement * 9) / 5 + 32;
-  let tempFeel = document.querySelector("#feelsLike");
-  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
-  tempFeel.innerHTML = Math.round(feelsLike);
-}
-
-function showCtemp(event) {
-  event.preventDefault();
-  celsiusLink.classList.add("active");
-  fahrenheitLink.classList.remove("active");
-  let temperatureElement = document.querySelector("#temperature");
-  let tempFeel = document.querySelector("#feelsLike");
-  temperatureElement.innerHTML = Math.round(celsiusTemperature);
-  tempFeel.innerHTML = Math.round(feelsLikeElement);
-}
 
 function geolocationRequest() {
   navigator.geolocation.getCurrentPosition(handlePosition);
@@ -166,17 +149,8 @@ function handlePosition(position) {
   axios.get(url).then(displayTemperature);
 }
 
-let celsiusTemperature = null;
-let feelsLikeElement = null;
-
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
-
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", showFtemp);
-
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", showCtemp);
 
 let submitLocation = document.querySelector("#geolocation-button");
 submitLocation.addEventListener("click", geolocationRequest);

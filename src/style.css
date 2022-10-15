@@ -97,7 +97,8 @@ form {
   background-color: #b0c9fb;
 }
 .main-icon{
-    width: 80%
+    width: 115px;
+    height: 115px;
 }
 .random-picture{
     max-width: 80px;
